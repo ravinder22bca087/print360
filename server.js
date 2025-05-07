@@ -5,9 +5,12 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors({
-  origin: "https://ravinder22bca087.github.io",
+  origin: "https://ravinder22bca087.github.io", // Your GitHub Pages site
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
 }));
-;
+
+
 app.use(express.json());
 
 // Initialize Gemini with API Key
